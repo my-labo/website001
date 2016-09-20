@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Preview環境・Test環境の本番環境同期設定</title>
+<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+<link href="./css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div class="set1">
+<hr>
+<h1>http://prewww.kaonavi.jp/</h1>
+<p>Previewサーバの再作成時刻を選択してください</p>
+<p>※時間設定は、当日の日本時間です。同期元のデータは、当日午前7時のHPサーバのデータとなります。</p>
+
+<form id="form1" name="form1" method="post" action="remake.php">
+実行時間：
+	<select name="pre_time" id="pre_time">
+		<option value="" selected="selected"/></option>
+		<option value="00" />00時</option>
+		<option value="01" />01時</option>
+		<option value="02" />02時</option>
+		<option value="03" />03時</option>
+		<option value="04" />04時</option>
+		<option value="05" />05時</option>
+		<option value="06" />06時</option>
+		<option value="07" />07時</option>
+		<option value="08" />08時</option>
+		<option value="09" />09時</option>
+		<option value="10" />10時</option>
+		<option value="11" />11時</option>
+		<option value="12" />12時</option>
+		<option value="13" />13時</option>
+		<option value="14" />14時</option>
+		<option value="15" />15時</option>
+		<option value="16" />16時</option>
+		<option value="17" />17時</option>	
+		<option value="18" />18時</option>
+		<option value="19" />19時</option>
+		<option value="20" />20時</option>
+		<option value="21" />21時</option>
+		<option value="22" />22時</option>
+		<option value="23" />23時</option>
+	</select>
+	<select name="pre_minit" id="pre_minit">
+		<option value="" selected="selected"/></option>
+		<option value="00" />00分</option>
+		<option value="01" />01分</option>
+		<option value="02" />02分</option>
+		<option value="03" />03分</option>
+		<option value="04" />04分</option>
+		<option value="05" />05分</option>
+		<option value="06" />06分</option>
+		<option value="07" />07分</option>
+		<option value="08" />08分</option>
+		<option value="09" />09分</option>
+		<option value="10" />10分</option>
+		<option value="11" />11分</option>
+		<option value="12" />12分</option>
+		<option value="13" />13分</option>
+		<option value="14" />14分</option>
+		<option value="15" />15分</option>
+		<option value="16" />16分</option>
+		<option value="17" />17分</option>
+		<option value="18" />18分</option>
+		<option value="19" />19分</option>
+		<option value="20" />20分</option>
+		<option value="21" />21分</option>
+		<option value="22" />22分</option>
+		<option value="23" />23分</option>
+		<option value="24" />24分</option>
+		<option value="25" />25分</option>
+		<option value="26" />26分</option>
+		<option value="27" />27分</option>
+		<option value="28" />28分</option>
+		<option value="29" />29分</option>
+		<option value="30" />30分</option>
+		<option value="31" />31分</option>
+		<option value="32" />32分</option>
+		<option value="33" />33分</option>
+		<option value="34" />34分</option>
+		<option value="35" />35分</option>
+		<option value="36" />36分</option>
+		<option value="37" />37分</option>
+		<option value="38" />38分</option>
+		<option value="39" />39分</option>
+		<option value="40" />40分</option>
+		<option value="41" />41分</option>
+		<option value="42" />42分</option>
+		<option value="43" />43分</option>
+		<option value="44" />44分</option>
+		<option value="45" />45分</option>
+		<option value="46" />46分</option>
+		<option value="47" />47分</option>
+		<option value="48" />48分</option>	
+		<option value="49" />49分</option>
+		<option value="50" />50分</option>
+		<option value="51" />51分</option>
+		<option value="52" />52分</option>	
+		<option value="53" />53分</option>
+		<option value="54" />54分</option>
+		<option value="55" />55分</option>
+		<option value="56" />56分</option>
+		<option value="57" />57分</option>
+		<option value="58" />58分</option>
+		<option value="59" />59分</option>
+	</select>
+	<input type="submit" value="送信"/>
+</form>
+
+<br />
+<form id="form2" name="form2" method="post" action="remake.php">
+	<button type="submit" name="remake_now" id="remake_now" value="pre_remake_now" style="color:#ff0000"><big>即時実行!</big></button>
+</form>
+</div>
+
+<div class="set1">
+<hr>
+<h1>http://test.kaonavi.jp/</h1>
+<p>Testサーバの再作成時刻を選択してください</p>
+<p>※時間設定は、当日の日本時間です。同期元のデータは、当日午前7時のHPサーバのデータとなります。</p>
+
+<form id="form3" name="form3" method="post" action="remake.php">
+実行時間：
+	<select name="test_time" id="test_time">
+		<option value="" selected="selected"/></option>
+		<option value="00" />00時</option>
+		<option value="01" />01時</option>
+		<option value="02" />02時</option>
+		<option value="03" />03時</option>
+		<option value="04" />04時</option>
+		<option value="05" />05時</option>
+		<option value="06" />06時</option>
+		<option value="07" />07時</option>
+		<option value="08" />08時</option>
+		<option value="09" />09時</option>
+		<option value="10" />10時</option>
+		<option value="11" />11時</option>
+		<option value="12" />12時</option>
+		<option value="13" />13時</option>
+		<option value="14" />14時</option>
+		<option value="15" />15時</option>
+		<option value="16" />16時</option>
+		<option value="17" />17時</option>
+		<option value="18" />18時</option>
+		<option value="19" />19時</option>
+		<option value="20" />20時</option>
+		<option value="21" />21時</option>
+		<option value="22" />22時</option>
+		<option value="23" />23時</option>
+	</select>
+	<select name="test_minit" id="test_minit">
+		<option value="" selected="selected"/></option>
+		<option value="00" />00分</option>
+		<option value="01" />01分</option>
+		<option value="02" />02分</option>
+		<option value="03" />03分</option>
+		<option value="04" />04分</option>
+		<option value="05" />05分</option>
+		<option value="06" />06分</option>
+		<option value="07" />07分</option>
+		<option value="08" />08分</option>
+		<option value="09" />09分</option>
+		<option value="10" />10分</option>
+		<option value="11" />11分</option>
+		<option value="12" />12分</option>
+		<option value="13" />13分</option>
+		<option value="14" />14分</option>
+		<option value="15" />15分</option>
+		<option value="16" />16分</option>
+		<option value="17" />17分</option>
+		<option value="18" />18分</option>
+		<option value="19" />19分</option>
+		<option value="20" />20分</option>
+		<option value="21" />21分</option>
+		<option value="22" />22分</option>
+		<option value="23" />23分</option>
+		<option value="24" />24分</option>
+		<option value="25" />25分</option>
+		<option value="26" />26分</option>
+		<option value="27" />27分</option>
+		<option value="28" />28分</option>
+		<option value="29" />29分</option>
+		<option value="30" />30分</option>
+		<option value="31" />31分</option>
+		<option value="32" />32分</option>
+		<option value="33" />33分</option>
+		<option value="34" />34分</option>
+		<option value="35" />35分</option>
+		<option value="36" />36分</option>
+		<option value="37" />37分</option>
+		<option value="38" />38分</option>
+		<option value="39" />39分</option>
+		<option value="40" />40分</option>
+		<option value="41" />41分</option>
+		<option value="42" />42分</option>
+		<option value="43" />43分</option>
+		<option value="44" />44分</option>
+		<option value="45" />45分</option>
+		<option value="46" />46分</option>
+		<option value="47" />47分</option>
+		<option value="48" />48分</option>
+		<option value="49" />49分</option>
+		<option value="50" />50分</option>
+		<option value="51" />51分</option>
+		<option value="52" />52分</option>
+		<option value="53" />53分</option>
+		<option value="54" />54分</option>
+		<option value="55" />55分</option>
+		<option value="56" />56分</option>
+		<option value="57" />57分</option>
+		<option value="58" />58分</option>
+		<option value="59" />59分</option>
+	</select>
+	<input type="submit" value="送信"/>
+</form>
+
+<br />
+<form id="form4" name="form4" method="post" action="remake.php">
+	<button type="submit" name="remake_now" id="remake_now" value="test_remake_now" style="color:#ff0000"><big>即時実行!</big></button>
+</form>
+</div>
+
+</body>
+</html>
